@@ -304,10 +304,9 @@
         //lazyload();
         $.ajax({
             type: "get",
-            url: "../home.html", //需要获取的页面内容
+            url: "home.html", //需要获取的页面内容
             async: true,
             success: function (data) {
-                console.log(data)
                 $('.body-content').html(data) //将获取到的内容放到当前页面的.contentBox中
             }
         });
