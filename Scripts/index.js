@@ -2,16 +2,21 @@
 
     var initLayout = function () {
         window.onload = function () {
-            lazyload();
+           // lazyload();
 
-            //$.ajax({
-            //    type: "get",
-            //    url: "home.html", //需要获取的页面内容
-            //    async: true,
-            //    success: function (data) {
-            //        $('.body-content').appen(data) //将获取到的内容放到当前页面的.contentBox中
-            //    }
-            //});
+            $.ajax({
+                type: "get",
+                url: "home.html", //需要获取的页面内容
+                async: true,
+                success: function (data) {
+                    $('.body-content').html(data) //将获取到的内容放到当前页面的.contentBox中
+                }
+            });
+
+
+            const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+            observer.observe();
+
 
         }
     }
