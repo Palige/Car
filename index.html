@@ -279,14 +279,14 @@
 
     <div class="body-content">
 
-        <!--<img class="lazyload" src="Images/noimage.jpg" data-src="Images/car01.png" />
+        <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car01.png" />
         <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car02.png" />
         <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car03.png" />
         <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car03.png" />
         <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car01.png" />
         <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car02.png" />
         <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car03.png" />
-        <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car03.png" />-->
+        <img class="lazyload" src="Images/noimage.jpg" data-src="Images/car03.png" />
         </div>
 </body>
 </html>
@@ -297,58 +297,4 @@
 <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>-->
 <script src="Content/wow/wow.min.js"></script>
-
-
-<script type="text/javascript">
-    window.onload = function () {
-        //lazyload();
-        $.ajax({
-            type: "get",
-            url: "home.html", //需要获取的页面内容
-            async: true,
-            success: function (data) {
-                $('.body-content').html(data) //将获取到的内容放到当前页面的.contentBox中
-            }
-        });
-
-        }
-
-    //鼠标移到导航菜单上
-    $(".navbar-nav").find("li").mouseover(function () {
-        hideMenu();
-        $(".drop-menu").hide();
-
-        $(this).addClass("active-menu").siblings().removeClass("active-menu");
-        var target = $(this).attr("menu");
-        if (target != "") {  //有子菜单
-            $($(this).find("strong")).removeClass("fa-caret-down").addClass("fa-caret-up");
-            $(".drop-menu").slideDown();
-            //$(".drop-menu").css("height", "400px");
-            // $("#" + target).fadeIn(800);
-            // $("#" + target).slideDown
-            $("#" + target).show();
-        }
-    });
-
-    var hideMenu = function () {
-        var $li = $(".active-menu");
-        var target = $($li).attr("menu");
-        if (target != "") {  //有子菜单
-            $($($li).find("strong")).removeClass("fa-caret-up").addClass("fa-caret-down");
-            $("#" + target).hide();
-           // $(".drop-menu").css("height", "0px");
-            $($li).removeClass("active-menu");
-        }
-
-    }
-    //鼠标离开导航菜单
-    $(".menu-list").mouseleave(function () {
-        hideMenu();
-        $(".drop-menu").slideUp();
-
-    });
-
-
-   
-
-</script>
+<script src="Scripts/index.js"></script>
