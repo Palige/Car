@@ -1,8 +1,12 @@
 ﻿var initFunc = function () {
 
     var initLayout = function () {
+     
         window.onload = function () {
            // lazyload();
+            const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+            observer.observe();
+
 
             $.ajax({
                 type: "get",
@@ -13,9 +17,6 @@
                 }
             });
 
-
-            const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-            observer.observe();
 
 
         }
